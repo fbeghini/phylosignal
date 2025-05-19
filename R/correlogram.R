@@ -81,7 +81,7 @@ phyloCorrelogram <- function(p4d, trait = names(tdata(p4d)),
       stop("dist.phylo is not valid")
     }
   }
-  if(dist.phylo == "Abouheif"){
+  if(is.character(dist.phylo) && dist.phylo == "Abouheif"){
     D.max <- max(D[D != max(D)] )
   } else {
     D.max <- max(D)
